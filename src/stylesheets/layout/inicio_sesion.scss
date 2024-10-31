@@ -1,0 +1,185 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  .login-logo {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    label {
+      font-size: 14px;
+      color: #000000;
+      text-align: left;
+    }
+
+    input {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-button {
+      background-color: #000000;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #333;
+      }
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  p {
+    margin: 20px 0;
+    font-size: 14px;
+  }
+
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .google-button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      flex: 1;
+
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+
+    .facebook-button {
+      background-color: #3b5998;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      flex: 1;
+
+      &:hover {
+        background-color: #344e86;
+      }
+    }
+  }
+
+  .login-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+  }
+}
+
+// Media Queries para hacerlo responsive
+@media (max-width: 768px) {
+  .login-card {
+    max-width: 90%;
+    padding: 15px;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    .login-button, .google-button, .facebook-button {
+      padding: 10px;
+    }
+
+    .login-links {
+      flex-direction: column;
+      gap: 10px;
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .login-page {
+    height: auto; // Para permitir que la página se ajuste mejor en pantallas más pequeñas
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    .login-logo {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    form {
+      gap: 10px;
+    }
+
+    .login-button {
+      padding: 12px; // Aumenta el área del botón para mejorar la usabilidad en pantallas táctiles
+    }
+
+    .social-buttons {
+      flex-direction: column;
+      gap: 10px; // Mayor espacio entre los botones
+      .google-button, .facebook-button {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+
+    .login-links {
+      font-size: 12px;
+    }
+  }
+
+  .login-page {
+    padding: 20px;
+  }
+}

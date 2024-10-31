@@ -2,10 +2,12 @@
   display: inline-block;
   margin-right: 15px;
   padding: 8px;
-  color: rgb(4, 100, 253);
+  text-decoration: none;
+  color: #000000;
 
   &--active {
-    background: #222;
-    color: white;
+    background: #51b655;
+    color: #000000;
+    border-radius: 8px; // Añade un valor aquí para redondear las esquinas
   }
 }
