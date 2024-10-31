@@ -1,35 +1,44 @@
-# frontend-sample-app
-Prueba
-Basic Frontend Development Environment to start an app with Webpack
+# README.AI
 
-This repo includes `Webpack` to start an environment to build frontend views using `React`.
+Frontend realizado sobre el proyecto de "README.AI", en donde se realizaron todas las vistas, destacando las más importantes del MVP, las cuales son:
 
-### Requirements
+* Grabar una reunión
+* Generar actas de reuniones
+* Calendario de reuniones
+
+Los integrantes son:
+- Sophia Corrales - 202013012-4
+- Eugenio Perez - 202073020-2
+- David Valdés - 202073125-K
+
+### Requerimientos
 
 - Node >= 16.13.1
 - npm >= 8.1.2
 
-### Quick start
+### Inicio rápido
 
-Install dependences
+Instalar dependencias
 
 ```
 npm install
+npm install react-icons
+npm install react-calendar
 ```
 
-Launch environment
+Correr ambiente
 
 ```
 npm run dev
 ```
 
-Now you can open http://localhost:5050
+Una vez se encuentre corriendo, se puede abrir desde el siguiente enlace: http://localhost:5050
 
-### Packages included
+### Paquetes incluidos
 
 - [Webpack](https://webpack.js.org/)
 - [React Router](https://reactrouter.com/en/main)
 
-### About stylesheets
+### Sobre estilos...
 
 - Sample stylesheets were written using the [BEM](https://getbem.com/) structure
