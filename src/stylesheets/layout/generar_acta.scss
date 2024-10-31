@@ -1,0 +1,150 @@
+.acta-reunion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+  padding: 20px;
+
+  .navbar {
+      width: 100%;
+  }
+
+  .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 400px;
+      width: 100%;
+
+      h2 {
+          font-size: 1.5rem;
+          margin-bottom: 20px;
+          color: #333;
+      }
+
+      .icon {
+          margin-bottom: 20px;
+          font-size: 60px;
+
+          &.rotating {
+              animation: spin 2s linear infinite;
+          }
+      }
+
+      p {
+          font-size: 1.2rem;
+          color: #444;
+          margin-bottom: 20px;
+      }
+
+      .buttons {
+          display: flex;
+          gap: 10px;
+          width: 100%;
+          justify-content: center;
+
+          a {
+              flex: 1;
+              padding: 10px;
+              font-size: 1rem;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              text-align: center;
+              text-decoration: none;
+              color: #ffffff;
+              transition: background 0.3s;
+
+              &.back {
+                  background-color: #d9534f;
+
+                  &:hover {
+                      background-color: #c9302c;
+                  }
+              }
+
+              &.pause {
+                  background-color: #f0ad4e;
+
+                  &:hover {
+                      background-color: #ec971f;
+                  }
+              }
+
+              &.save {
+                  background-color: #5cb85c;
+
+                  &:hover {
+                      background-color: #4cae4c;
+                  }
+              }
+          }
+      }
+  }
+}
+
+// Animación para el efecto de giro
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+// Media Queries para hacer la vista responsive
+@media (max-width: 768px) {
+  .acta-reunion {
+      height: auto;
+      padding: 10px;
+
+      .content {
+          max-width: 90%;
+          
+          h2 {
+              font-size: 1.3rem;
+          }
+
+          .icon {
+              font-size: 50px;
+          }
+
+          p {
+              font-size: 1rem;
+          }
+
+          .buttons a {
+              font-size: 0.9rem;
+              padding: 8px;
+          }
+      }
+  }
+}
+
+@media (max-width: 480px) {
+  .acta-reunion {
+      height: auto;
+
+      .content {
+          h2 {
+              font-size: 1.2rem;
+          }
+
+          .icon {
+              font-size: 40px;
+          }
+
+          p {
+              font-size: 0.9rem;
+          }
+
+          .buttons a {
+              font-size: 0.8rem;
+              padding: 6px;
+          }
+      }
+  }
+}

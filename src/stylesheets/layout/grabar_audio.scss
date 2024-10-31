@@ -1,0 +1,162 @@
+.grabar-reunion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+  padding: 20px;
+
+  .navbar {
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .icon {
+      margin-bottom: 20px;
+
+      &.recording {
+        animation: pulse 1s infinite;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      justify-content: center;
+
+      // Estilos para los botones de control
+      a, button {  
+        flex: 1;
+        padding: 10px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        color: #fff;
+        transition: background 0.3s;
+        text-decoration: none;
+
+        &.pause {
+          background-color: #f0ad4e;
+
+          &:hover {
+            background-color: #ec971f;
+          }
+        }
+
+        &.play {
+          background-color: #5bc0de;
+
+          &:hover {
+            background-color: #31b0d5;
+          }
+        }
+
+        &.stop {
+          background-color: #d9534f;
+
+          &:hover {
+            background-color: #c9302c;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Animación de pulso para el ícono de grabación
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: #d9534f;
+  }
+  50% {
+    transform: scale(1.1);
+    color: #ff6b6b;
+  }
+  100% {
+    transform: scale(1);
+    color: #d9534f;
+  }
+}
+
+// Media Queries para hacer la vista responsive
+@media (max-width: 768px) {
+  .grabar-reunion {
+    height: auto; // Ajusta la altura para pantallas pequeñas
+    padding: 15px;
+
+    .content {
+      max-width: 90%;
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+
+      .buttons {
+        flex-direction: column; // Coloca los botones en columna
+        gap: 15px;
+
+        a, button {
+          font-size: 1rem;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .grabar-reunion {
+    padding: 10px;
+
+    .content {
+      h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .buttons {
+        a, button {
+          font-size: 0.9rem;
+          padding: 8px;
+        }
+      }
+    }
+
+    .icon {
+      svg {
+        width: 40px;
+        height: 40px; // Ajuste del tamaño del ícono de micrófono en pantallas pequeñas
+      }
+    }
+  }
+}
