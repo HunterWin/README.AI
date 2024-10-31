@@ -1,5 +1,9 @@
 .nav-bar {
+  position: sticky;
+  justify-content: center;
+  top: 0;
+  z-index: 10;
   display: flex;
-  background-color: #ccc;
+  background-color: #ffffff;
   padding-left: 20px;
 }
