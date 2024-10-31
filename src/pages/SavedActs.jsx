@@ -1,5 +1,6 @@
 import React from 'react';
-import '../stylesheets/saved-acts/SavedActs.scss';
+import '../stylesheets/layout/SavedActs.scss';
+import { Link } from 'react-router-dom';
 import { FaFileWord, FaFilePdf } from 'react-icons/fa';
 
 const SavedActs = () => {
@@ -12,10 +13,10 @@ const SavedActs = () => {
   return (
     <div className="saved-acts">
       <header className="header">
-        <button className="profile-icon">👤</button>
+        <Link to="/home/perfil" className="profile-icon">👤</Link>
         <h1>Actas guardadas</h1>
         <p>Actas guardadas con éxito</p>
-        <button className="close-icon">✖</button>
+        <Link to="/home" className="close-icon">✖</Link>
       </header>
       <div className="document-list">
         {documents.map((doc) => (
@@ -28,12 +29,6 @@ const SavedActs = () => {
           </div>
         ))}
       </div>
-      <nav className="bottom-nav">
-        <button>🔍 Buscar</button>
-        <button>📄 Actas</button>
-        <button>❤️ Favoritos</button>
-        <button>📋 Filtrar</button>
-      </nav>
     </div>
   );
 };

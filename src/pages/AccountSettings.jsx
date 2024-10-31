@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../stylesheets/account-settings/AccountSettings.scss';
+import '../stylesheets/layout/AccountSettings.scss';
 
 const AccountSettings = () => {
   return (
@@ -14,21 +14,22 @@ const AccountSettings = () => {
       </div>
       
       <div className="account-settings__options">
-        {/* Enlazando a las rutas correspondientes */}
-        <SettingItem icon="👤" label="Nombre"/>
-        <SettingItem icon="@" label="Correo"/>
-        <SettingItem icon="🔑" label="Cambiar contraseña"/>
+        {/* Información de perfil, no clickeable */}
+        <SettingItem icon="👤" label="[Nombre]"/>
+        <SettingItem icon="📩" label="[Correo]"/>
+        <SettingItem icon="🔑" label="[Contraseña]"/>
       </div>
     </div>
   );
 };
 
-// Componente SettingItem para cada opción del menú
-const SettingItem = ({ icon, label, path }) => (
-  <Link to={path} className="setting-item">
+// Componente SettingItem para cada opción del menú, mostrando información estática
+const SettingItem = ({ icon, label, info }) => (
+  <div className="setting-item">
     <span className="setting-item__icon">{icon}</span>
     <span className="setting-item__label">{label}</span>
-  </Link>
+    <span className="setting-item__info">{info}</span>
+  </div>
 );
 
 export default AccountSettings;
